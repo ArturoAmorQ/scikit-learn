@@ -867,7 +867,20 @@ following cost function:
 .. math:: \min_{w} C \sum_{i=1}^n \left[-y_i \log(\hat{p}(X_i)) - (1 - y_i) \log(1 - \hat{p}(X_i))\right] + r(w).
 
 
-We currently provide four choices for the regularization term:
+We currently provide four choices for the regularization term  :math:`r(w)`  via
+the `penalty` argument:
+
++----------------+-------------------------------------------------+
+| penalty        | :math:`r(w)`                                    |
++================+=================================================+
+| `None`         | :math:`0`                                       |
++----------------+-------------------------------------------------+
+| :math:`\ell_1` | :math:`\|w\|_1`                                 |
++----------------+-------------------------------------------------+
+| :math:`\ell_2` | :math:`\frac{1}{2}\|w\|_2^2 = \frac{1}{2}w^T w` |
++----------------+-------------------------------------------------+
+| `ElasticNet`   | :math:`\frac{1 - \rho}{2}w^T w + \rho \|w\|_1`  |
++----------------+-------------------------------------------------+
 
 #. `penalty=None` for :math:`r(w) = 0`
 #. `penalty=l1` for the pure :math:`\ell_1`-penalty :math:`r(w) = \|w\|_1`
