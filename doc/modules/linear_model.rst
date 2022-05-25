@@ -882,11 +882,6 @@ the `penalty` argument:
 | `ElasticNet`   | :math:`\frac{1 - \rho}{2}w^T w + \rho \|w\|_1`  |
 +----------------+-------------------------------------------------+
 
-#. `penalty=None` for :math:`r(w) = 0`
-#. `penalty=l1` for the pure :math:`\ell_1`-penalty :math:`r(w) = \|w\|_1`
-#. :math:`\ell_2,\, r(w) = \frac{1}{2}\|w\|_2^2 = \frac{1}{2}w^T w`
-#. ElasticNet, :math:`r(w) = \frac{1 - \rho}{2}w^T w + \rho \|w\|_1`
-
 For ElasticNet, :math:`\rho` (which corresponds to the `l1_ratio` parameter)
 controls the strength of :math:`\ell_1` regularization vs. :math:`\ell_2`
 regularization. Elastic-Net is equivalent to :math:`\ell_1` when
