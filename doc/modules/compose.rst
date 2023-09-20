@@ -70,7 +70,7 @@ is an estimator object::
     Pipeline(steps=[('reduce_dim', PCA()), ('clf', SVC())])
 
 |details-start|
-**Shortand version using :func:`make_pipeline`**
+**Shorthand version using :func:`make_pipeline`**
 |details-split|
 
 The utility function :func:`make_pipeline` is a shorthand
@@ -155,10 +155,10 @@ You can also provide custom feature names for the input data using
 Access to nested parameters
 ...........................
 
-It is common to adjust the parameters of an estimator within a pipeline. This parameter
-is therefore nested because it belongs to a particular sub-step. Parameters of the
-estimators in the pipeline are accessible using the ``<estimator>__<parameter>``
-syntax::
+It is common to adjust the parameters of an estimator within a pipeline. This
+parameter is therefore nested because it belongs to a particular sub-step.
+Parameters of the estimators in the pipeline are accessible using the
+``<estimator>__<parameter>`` syntax::
 
     >>> pipe.set_params(clf__C=10)
     Pipeline(steps=[('reduce_dim', PCA()), ('clf', SVC(C=10))])
